@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Faculty List</title>
+  </head>
+  <body>
+    <h1>Faculty List</h1>
+    <table>
+      <tr>
+        <th>Email</th>
+        <th>Name</th>
+      </tr>
+      {% for faculty in faculty_list %}
+      <tr>
+        <td>{{ faculty.faculty_email }}</td>
+        <td>{{ faculty.faculty_name }}</td>
+      </tr>
+      {% endfor %}
+    </table>
+  </body>
+</html>

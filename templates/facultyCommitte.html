@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Faculty Committe List</title>
+    <style>
+      html, body {height:100%;}
+      html {display:table; width:100%;}
+      body {display:table-cell; text-align:center; vertical-align:middle;}
+  </style>    
+  </head>
+  <body>
+    <h1>Faculty Committe List</h1>
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Academic Year</th>
+        <th>Faculty Start Year</th>
+        <th>Membership Type</th>
+        <th>Designation</th>
+      </tr>
+      {% for faculty in faculty_committee_list %}
+      <tr>
+        <td>{{ faculty_committee.committee_code }}</td>
+        <td>{{ faculty_committee.faculty_email }}</td>
+        <td>{{ faculty_committee.academic_year }}</td>
+        <td>{{ faculty_committee.faculty_start_semester }}</td>
+        <td>{{ faculty_committee.membership_type }}</td>
+        <td>{{ faculty_committee.designation }}</td>
+      </tr>
+      {% endfor %}
+    </table>
+  </body>
+</html>
