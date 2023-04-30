@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>faculty-committee-all</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="my-4">Faculty-Committee-all</h1>
+      <table class="table table-striped">
+    <table>
+      <tr>
+        <th>Code</th>
+        <th>Email</th>
+        <th>Name</th>
+        <th>type</th>
+        <th>designation</th>
+        <th>year</th>
+        <th>end_semester</th>
+
+      </tr>
+      {% for faculty in faculty_committee_list %}
+      <tr>
+        <td>{{ faculty.committee_code }}</td>
+        <td>{{ faculty.faculty_email }}</td>
+        <td>{{ faculty.faculty_name }}</td>
+        <td>{{ faculty.membership_type}}</td>
+        <td>{{ faculty.designation }}</td>
+        <td>{{ faculty.academic_year }}</td>
+        <td>{{ faculty.faculty_end_semester }}</td>
+      </tr>
+      {% endfor %}
+    </table>
+</div>
+  </body>
+</html>

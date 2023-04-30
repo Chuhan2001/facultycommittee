@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>faculty-committee-last-five</title>
+  </head>
+  <body>
+    <h1>faculty-committee-last-five</h1>
+    <table>
+      <tr>
+        <th>Code</th>
+        <th>Email</th>
+        <th>type</th>
+        <th>designation</th>
+        <th>year</th>
+        <th>end_semester</th>
+
+      </tr>
+      {% for faculty in faculty_committee_list %}
+      <tr>
+        <td>{{ faculty.committee_code }}</td>
+        <td>{{ faculty.faculty_email }}</td>
+        <td>{{ faculty.membership_type}}</td>
+        <td>{{ faculty.designation }}</td>
+        <td>{{ faculty.academic_year }}</td>
+        <td>{{ faculty.faculty_end_semester }}</td>
+      </tr>
+      {% endfor %}
+    </table>
+  </body>
+</html>
